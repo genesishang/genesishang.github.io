@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Genesis Hang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Prata&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --butter: #f6edb8;
+      --butter-light: #fff7cf;
+      --matcha: #7d8d42;
+      --deep-green: #4d5b2f;
+      --dark-red: #8a2328;
+      --ink: #1f1f1b;
+      --line: rgba(138, 35, 40, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--butter);
+      color: var(--ink);
+      font-family: "Fredoka", sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .page {
+  width: min(980px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: var(--deep-green);
+      font-weight: 500;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .hero {
+      padding: 84px 0 72px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      display: block;
+      color: var(--deep-green);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Prata", serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      color: var(--dark-red);
+      font-size: clamp(2.6rem, 3vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 30px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .section-label {
+      color: var(--deep-green);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--matcha);
+      font-size: clamp(1.8rem, 2vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .editorial-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .editorial-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 26px;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .editorial-item:first-child {
+      border-top: none;
+    }
+
+    .number {
+      color: var(--deep-green);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding-top: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .editorial-item h3 {
+      margin: 0 0 10px;
+      color: var(--dark-red);
+      font-size: clamp(2rem,  2vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .editorial-item p {
+      margin: 0;
+      max-width: 640px;
+      font-size: 0.92rem;
+    }
+
+    .currently {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .current-item {
+      padding-top: 16px;
+      border-top: 2px solid var(--dark-red);
+    }
+
+    .current-item span {
+      display: block;
+      color: var(--deep-green);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .current-item p {
+      margin: 0;
+      font-family: "Prata", serif;
+      color: var(--dark-red);
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+
+    footer {
+      padding: 34px 0 42px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.82rem;
+      color: rgba(31,31,27,0.7);
+    }
+
+    @media (max-width: 760px) {
+      .hero { padding: 64px 0 56px; }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .section-label { padding-top: 0; }
+
+      .editorial-item {
+        grid-template-columns: 52px 1fr;
+        gap: 18px;
+      }
+
+      .currently {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+     .about-hero {
+  padding: 70px 0 60px;
+}
+
+.photo-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 36px;
+  align-items: end;
+}
+
+.photo-block {
+  width: 100%;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.side-photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.photo-caption {
+  margin: 10px 0 0;
+  font-size: 0.75rem;
+  color: var(--deep-green);
+  letter-spacing: 0.03em;
+}
+
+.about-intro {
+  margin-top: 28px;
+  max-width: 760px;
+}
+
+.about-intro h1 {
+  margin: 0 0 14px;
+}
+
+.hero-copy {
+  margin: 0;
+  max-width: 700px;
+  font-size: 0.95rem;
+}
+    </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <nav>
+      <a class="brand" href="index.html">Genesis Hang</a>
+      <a class="back-link" href="index.html">← back home</a>
+    </nav>
+
+    <section class="about-hero">
+
+      <span class="kicker">OUTSIDE THE LAB</span>
+
+      <div class="photo-row">
+
+        <div class="photo-block">
+          <img
+            class="hero-photo"
+            src="IMG_8635.jpeg"
+            alt="Taking photos of matcha drinks"
+          >
+
+          <p class="photo-caption">
+            matcha experiments, documented accordingly.
+          </p>
+        </div>
+
+        <div class="photo-block side-block">
+          <img
+            class="side-photo"
+            src="IMG_9268.jpeg"
+            alt="Circe and an iced drink"
+          >
+
+          <p class="photo-caption">
+            favorite summer 2026 read!
+          </p>
+        </div>
+
+      </div>
+
+      <div class="about-intro">
+        <h1>a little more about me.</h1>
+
+        <p class="hero-copy">
+          When I'm not doing research, I'm usually making matcha,
+          trying a new café, taking photos, dancing, or documenting
+          little pieces of PhD life.
+        </p>
+      </div>
+
+    </section>
+    <section>
+      <div class="section-head">
+        <div class="section-label">01 · lately</div>
+      </div>
+
+      <div class="editorial-list">
+        <div class="editorial-item">
+          <div class="number">A</div>
+          <div>
+            <h3>Matcha + cafes</h3>
+            <p>
+              I love experimenting with matcha and espresso, finding cozy cafés, and collecting ideas
+              for my own home cafe.
+            </p>
+          </div>
+        </div>
+
+        <div class="editorial-item">
+          <div class="number">B</div>
+          <div>
+            <h3>Using my hands</h3>
+            <p>
+              When I can, I love to practice using the right side of my brain.
+              I enjoy polymer clay molding, painting, and writing. I always seem to 
+              find myself coming back to photography and video.
+            </p>
+          </div>
+        </div>
+
+        <div class="editorial-item">
+          <div class="number">C</div>
+          <div>
+            <h3>Staying active</h3>
+            <p>
+              I've been experimenting with different ways to stay in shape. Some of my personal
+              favorites are to lift some weights, dance, and go for walks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-label">02 · currently</div>
+      </div>
+
+      <div class="currently">
+        <div class="current-item">
+          <span>based in</span>
+          <p>Atlanta, Georgia</p>
+        </div>
+
+        <div class="current-item">
+          <span>trying</span>
+          <p>to learn how to cook...</p>
+        </div>
+
+        <div class="current-item">
+          <span>reading</span>
+          <p>Best Offer Wins by Marisa Kashino</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Genesis Hang</span>
+      <span>made with curiosity, code, and matcha</span>
+    </footer>
+
+  </div>
+
+  <script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+</body>
+</html>

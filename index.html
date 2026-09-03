@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Genesis Hang — PhD student in Computer Science & Informatics researching machine learning and human-centered AI." />
+  <title>Genesis Hang — Academic Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --muted: #73776f;
+      --sage: #ddc6a4;
+      --sage-dark: #727f33;
+      --blush: #cdf0a0;
+      --periwinkle: #cfd6f6;
+      --periwinkle-dark: #6a5247;
+      --gold: #f3dfa4;
+      --lavender: #e7def7;
+      --peach: #f5d6be;
+      --soft-blue: #d9e8f5;
+      --line: #ebe9e3;
+      --radius: 18px;
+      --butter: #fcf3cc;
+      --cream: #FFF9E8;
+      --matcha: #859651;
+      --deep-green: #4E5B34;
+      --dark-red: #7D1F1F;
+      --text: #1E1E1E;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Nunito Sans', 'Roboto', Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+#personal {
+  background: #f7efbf;
+  padding: 90px 70px;
+  border-radius: 32px;
+}
+
+.personal-intro {
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+
+.personal-label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.55);
+  color: #78883d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+#personal h2 {
+  font-family: "Prata", serif;
+  color: #78883d;
+  font-size: 3.4rem;
+  font-weight: 400;
+  margin: 18px 0 26px;
+}
+
+.personal-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  padding: 42px 0;
+  border-top: 1px solid rgba(125, 31, 31, 0.18);
+}
+
+.number {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #78883d;
+  margin-bottom: 6px;
+}
+
+.personal-row h3 {
+  font-family: "Prata", serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #8b1f24;
+  margin: 0 0 14px;
+}
+
+.personal-row p {
+  max-width: 540px;
+}
+
+.personal-visual {
+  min-height: 180px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+}
+
+.matcha-block {
+  background: #87964f;
+  color: #fff7cf;
+}
+
+.create-block {
+  background: #8b1f24;
+  color: #fff7cf;
+}
+
+.dance-block {
+  background: #fff8dc;
+  color: #8b1f24;
+  border: 1px solid rgba(139,31,36,0.18);
+}
+
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .page { width: min(1080px, calc(100% - 36px)); margin: 0 auto; }
+
+    nav {
+      position: sticky;
+      top: 14px;
+      z-index: 50;
+      margin-top: 14px;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand { font-weight: 700; font-size: 1rem; text-decoration: none; padding-left: 8px; }
+    .nav-links { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: .88rem; padding: 7px 11px; border-radius: 999px; }
+    .nav-links a:hover { background: var(--cream); color: var(--matcha); }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 64px;
+      align-items: center;
+      padding: 96px 0 76px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #f5f6ea;
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--sage-dark);
+      font-weight: 700;
+      margin-bottom: 15px;
+      width: fit-content;
+    }
+
+    h1, h2, h3 { margin-top: 0; line-height: 1.15; }
+    h1 { font-size: clamp(3rem, 6vw, 5.6rem); letter-spacing: -.055em; margin-bottom: 18px; font-weight: 650; }
+    h1 em { font-style: normal; color: var(--matcha); }
+    ::selection { background: var(--gold); color: var(--text); }
+    h2 { font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -.035em; margin-bottom: 0; }
+    h3 { font-size: 1.25rem; margin-bottom: 7px; }
+    .hero p { max-width: 690px; font-size: 1.06rem; color: var(--muted); }
+
+    body {
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 100;
+  }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid #cfcac3;
+      font-weight: 700;
+      font-size: .92rem;
+      transition: .18s ease;
+      background: transparent;
+    }
+    .btn.primary { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
+    .btn:not(.primary) { background: #fff; border-color: #d8d5cd; }
+    .btn:not(.primary):hover { background: var(--gold); border-color: var(--gold); }
+    .btn:hover { transform: translateY(-1px); }
+
+    .portrait-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .portrait-placeholder {
+      width: min(290px, 74vw);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--periwinkle), var(--blush) 48%, var(--sage));
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 38px;
+      color: #6f756f;
+      font-size: .95rem;
+      border: 1px solid var(--line);
+    }
+    .hero-note { display: flex; gap: 10px; color: var(--muted); font-size: .86rem; }
+    .hero-note span + span::before { content: '•'; margin-right: 10px; color: #b2b5b0; }
+
+    section { padding: 72px 0; }
+    .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 36px; align-items: end; margin-bottom: 30px; }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .grid-3 .card:nth-child(1) { border-top: 5px solid var(--sage); }
+    .grid-3 .card:nth-child(2) { border-top: 5px solid var(--periwinkle); }
+    .grid-3 .card:nth-child(3) { border-top: 5px solid var(--blush); }
+    .grid-2 .card:nth-child(1) { border-top: 5px solid var(--gold); }
+    .grid-2 .card:nth-child(2) { border-top: 5px solid var(--lavender); }
+    .card { transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(60,65,55,.07); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .tag { padding: 5px 9px; border-radius: 999px; background: var(--soft-blue); border: 1px solid transparent; font-size: .76rem; color: #50657a; }
+    .tag:nth-child(2) { background: var(--blush); color: #727f33; }
+    .tag:nth-child(3) { background: var(--lavender); color: #665a7a; }
+
+    .timeline { display: grid; }
+    .timeline-item { display: grid; grid-template-columns: 165px 1fr; gap: 22px; padding: 20px 0; border-top: 1px solid var(--line); }
+    .timeline-item:last-child { border-bottom: 1px solid var(--line); }
+    .time { color: var(--sage-dark); font-weight: 700; font-size: .88rem; }
+    .timeline-item h3 { margin-bottom: 4px; }
+    .timeline-item p { margin: 0; color: var(--muted); }
+
+    .pub { display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: start; }
+    .pub-num { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: #725f2b; font-weight: 700; font-size: .86rem; }
+
+    .personal { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0; }
+    .personal .card { background: transparent; }
+
+    footer { padding: 44px 0 64px; color: var(--muted); font-size: .88rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); }
+
+    .floaty { position: fixed; right: 22px; bottom: 22px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; text-decoration: none; background: var(--surface); border: 1px solid var(--line); font-size: 1rem; }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .hero, .section-head, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding-top: 64px; min-height: auto; gap: 42px; }
+      .portrait-wrap { align-items: flex-start; }
+      .section-head { gap: 12px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 5px; }
+    }
+    html {
+  font-size: 12px;
+  }
+  section {
+    padding: 60px 0;
+  }
+
+  .portrait-placeholder {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.portrait-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center 20%; */
+  transform: scale(1.95);
+  transform-origin: center 40%;
+}
+  
+  </style>
+</head>
+
+<body>
+  <div class="page" id="top">
+
+    <!-- NAV -->
+    <nav>
+      <a class="brand" href="#top">Genesis Hang</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#personal">Beyond CS</a>
+      </div>
+    </nav>
+
+
+    <!-- INTRO / HERO -->
+    <header class="hero">
+
+      <div class="hero-text">
+
+        <h1 style="font-family: 'Fredoka', sans-serif; font-weight: 400;">
+          Hi, I’m <em>Genesis!</em>
+        </h1>
+
+        <p>
+          I’m a first year PhD student in
+          <strong>Computer Science & Informatics at Emory University</strong>.
+          My research sits at the intersection of machine learning,
+          healthcare, and human-centered AI.
+        </p>
+
+        <p>
+          I’m especially interested in adaptive systems, uncertainty,
+          personalization, and how computational tools can help people
+          understand information and make decisions in high-stakes settings.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="CV_GenesisHang.docx.pdf" target="_blank">CV</a>
+          <a class="btn" href="mailto:gmhang@emory.edu">Email</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=38Jtv4oAAAAJ" target="_blank">Google Scholar</a>
+          <a class="btn" href="https://github.com/genesishang" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/genesishang1/" target="_blank">LinkedIn</a>
+        </div>
+
+      </div>
+
+
+      <div class="portrait-wrap">
+
+        <div class="portrait-placeholder">
+          <img src="img-circle.jpg" alt="Genesis Hang">
+        </div>
+
+        <div class="hero-note">
+          <span>Atlanta, GA</span>
+          <span>Emory University</span>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+      <div class="section-head">
+        <h2>about me</h2>
+      </div>
+
+      <p>
+        Before coming to Emory, I studied Computer Science and Biochemistry
+        at Wellesley College. My background spans probabilistic modeling,
+        clinical forecasting, medical imaging, and human-centered AI.
+      </p>
+
+      <p>
+        Broadly, I’m interested in building machine learning systems that
+        account for the fact that people are different — in what information
+        they have, what they need, and how they make decisions.
+      </p>
+
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section id="research">
+
+      <div class="section-head">
+        <h2>research</h2>
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="time">
+            Wellesley
+          </div>
+
+          <div>
+            <h3>Forecasting with limited patient data</h3>
+
+            <p>
+              At the MOGU Lab, I worked on probabilistic methods for forecasting
+              suicide-related events for patients with limited longitudinal data.
+              This work focused on modeling patient similarity while preserving
+              meaningful individual heterogeneity.
+            </p>
+
+            <div class="tag-row">
+              <span class="tag">Gaussian processes</span>
+              <span class="tag">probabilistic ML</span>
+              <span class="tag">healthcare</span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="time">
+            Novartis
+          </div>
+
+          <div>
+            <h3>Histopathology image retrieval</h3>
+
+            <p>
+              As an AI Studio Fellow at Novartis, I worked with neural-network
+              embeddings for histopathology images and evaluated methods for
+              retrieving visually and clinically similar image samples.
+            </p>
+
+            <div class="tag-row">
+              <span class="tag">medical imaging</span>
+              <span class="tag">representation learning</span>
+              <span class="tag">CBIR</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+
+      <div class="section-head">
+        <h2>publications</h2>
+      </div>
+
+      <div class="publication-item">
+
+        <a href="https://arxiv.org/pdf/2511.18199" style="color: var(--matcha)">
+          <strong>
+            Improving Forecasts of Suicide Attempts for Patients with Little Data
+          </strong>
+        </a>
+
+        <p>
+          <strong>Genesis Hang</strong>, Annie Chen, Hope Neveux, Matthew K. Nock,
+          Yaniv Yacoby
+        </p>
+
+        <p>
+          <em>
+            NeurIPS Learning Time Series for Health Workshop, 2025
+          </em>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SELECTED TALKS
+    <section id="talks">
+
+      <div class="section-head">
+        <h2>Selected talks & posters</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="time">Dec 2025</div>
+
+          <div>
+            <h3>NeurIPS Learning Time Series for Health Workshop</h3>
+            <p>
+              Poster · Improving Forecasts of Suicide Attempts for Patients
+              with Little Data
+            </p>
+          </div>
+        </div>
+
+    </section> -->
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+      <div class="section-head">
+        <h2>education</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="time">
+            2026 — 2031
+          </div>
+
+          <div>
+            <h3>Emory University</h3>
+            <p>
+              PhD in Computer Science & Informatics
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="time">
+            2022 — 2026
+          </div>
+
+          <div>
+            <h3>Wellesley College</h3>
+            <p>
+              B.A. in Computer Science · Minor in Biochemistry
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="time">
+            2024 + 2025
+          </div>
+
+          <div>
+            <h3>Massachusetts Institute of Technology</h3>
+            <p>
+              Cross-registered student; 6.100A, 6.100B, 6.101
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TEACHING -->
+    <section id="teaching">
+
+      <div class="section-head">
+        <h2>teaching</h2>
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="time">
+          Fall 2025
+        </div>
+
+        <div>
+          <h3>
+            Teaching Assistant · CS 345 Probabilistic Foundations of Machine Learning
+          </h3>
+
+          <p>
+            Wellesley College
+          </p>
+
+          <p>
+            Supported students with probabilistic machine learning,
+            Bayesian regression and classification, generative models,
+            coursework, and weekly office hours.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AWARDS -->
+    <section id="awards">
+
+      <div class="section-head">
+        <h2>selected recognition</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="time">2025</div>
+
+          <div>
+            <h3>Ronald E. McNair Scholar</h3>
+            <p>Wellesley College</p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="time">2024</div>
+
+          <div>
+            <h3>Break Through Tech AI Fellow</h3>
+            <p>Massachusetts Institute of Technology</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+<section id="personal">
+  <p class="eyebrow">OUTSIDE THE LAB</p>
+  <h2>a little more about me</h2>
+  <p>
+    Trying to stay crafty and healthy while also keeping my tastebuds satisfied!
+  </p>
+
+  <a href="about.html" class="personal-link">
+    More outside the lab →
+  </a>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+
+      <span>
+        © <span id="year"></span> Genesis Hang
+      </span>
+
+      <span>
+        made with curiosity, code, and matcha
+      </span>
+
+    </footer>
+
+  </div>
+
+
+  <a class="floaty" href="#top" aria-label="Back to top">↑</a>
+
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
