@@ -304,6 +304,21 @@
   transform-origin: center 40%;
 }
   
+.time {
+  display: flex;
+  flex-direction: column;
+}
+
+.org-logo {
+  width: 90px;
+  height: auto;
+  margin-top: 5px;
+  align-self: center;
+}
+
+.research-content {
+  padding-top: 35px;
+}
   </style>
 </head>
 
@@ -409,14 +424,15 @@
         <div class="timeline-item">
 
           <div class="time">
-            Wellesley
+            <span>Wellesley</span>
+            <a class="org-logo" href="https://mogu-lab.github.io/" target="_blank" rel="noopener noreferrer"> <img src="mogu-lab-logo.png" alt="Wellesley logo"></a>
           </div>
 
-          <div>
+          <div class="research-content">
             <h3>Forecasting with limited patient data</h3>
 
             <p>
-              At the MOGU Lab, I worked on probabilistic methods for forecasting
+              At the <a href="https://mogu-lab.github.io/" target="_blank" rel="noopener noreferrer">MOGU Lab</a>, led by Yaniv Yacoby, I worked on probabilistic methods for forecasting
               suicide-related events for patients with limited longitudinal data.
               This work focused on modeling patient similarity while preserving
               meaningful individual heterogeneity.
@@ -435,10 +451,11 @@
         <div class="timeline-item">
 
           <div class="time">
-            Novartis
+            <span>Novartis</span>
+            <img src="novartis-logo.png" alt="Novartis logo" class="org-logo" >
           </div>
 
-          <div>
+          <div class="research-content">
             <h3>Histopathology image retrieval</h3>
 
             <p>
